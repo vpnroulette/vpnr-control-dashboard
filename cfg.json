@@ -1,0 +1,12 @@
+{
+  "port": 3013,
+  "bind": "0.0.0.0",
+  "servers": [
+    {"id": 0, "name": "VPNRoulette NTC", "host": "192.168.68.111","man_port": 7656}
+  ],
+  "username": "admin",
+  "password": "admin",
+  "web": {
+    "dateFormat": "HH:mm - DD.MM.YY"
+  }
+}

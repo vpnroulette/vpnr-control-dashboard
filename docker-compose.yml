@@ -1,0 +1,14 @@
+version: '2'
+services:
+  openvpn-status:
+    image: auspexeu/openvpn-status
+    container_name: openvpn-status
+    environment:
+      - STATUS_USERNAME=admin
+      - STATUS_PASSWORD=admin
+      - STATUS_WEB_FORMAT='HH:mm:ss - DD.MM.YY'
+    volumes:
+      - ./servers:/usr/src/app/servers
+    ports:
+      - 8080:3013
+    restart: "unless-stopped"
