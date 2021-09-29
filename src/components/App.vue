@@ -47,21 +47,7 @@
       <clients v-if="tab === 'clients'"/>
       <locations v-if="tab === 'map'"/>
       <events v-if="tab === 'events'"/>
-      <v-footer app fixed>
-        <v-flex>
-          <v-card>
-            <v-card-actions>
-              <v-tooltip top>
-                <template #activator="{on}">
-                  <span v-on="on">Server time: {{serverTime}}</span>
-                </template>
-                <span>Server time</span>
-              </v-tooltip>
-              <v-spacer/>
-            </v-card-actions>
-          </v-card>
-        </v-flex>
-      </v-footer>
+
       <v-snackbar v-model="snack.visible" bottom :timeout="snack.timeout" :color="snack.color">
         {{snack.text}}
         <v-btn text @click="snack.visible = false">
